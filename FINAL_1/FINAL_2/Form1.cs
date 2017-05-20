@@ -12,10 +12,12 @@ namespace FINAL_2
 {
     public partial class Form1 : Form
     {
-        public int x = 0, y = 0;
+        Button[,] button = new Button[3, 3];
+        public int x = 1, y = 1;
         public Form1()
         {
             InitializeComponent();
+            
         }
         public bool is_prime(int x)
         {
@@ -31,45 +33,34 @@ namespace FINAL_2
         private void button15_Click(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
-            btn.Text += x;
+            if (btn.Text == "0")
+            btn.Text = " ";
+            btn.Text = x.ToString();
             x++;
-            btn.Text = btn.Text;
+            
+            
             if (is_prime(int.Parse(btn.Text)))
             {
-                textBox1.Text += y;
-                y++;
+                textBox1.Text = y.ToString();
             }
 
         }
 
-        private void button16_Click(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
-
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    button[i, j] = new Button();
+                    button[i, j].Size = new Size(51, 51);
+                    button[i, j].Location = new Point(i * 51, j * 51);
+                    button[i, j].Text = "0";
+                    button[i, j].Click += new EventHandler(button15_Click);
+                    Controls.Add(button[i, j]);
+                }
+            }
         }
-
-        private void button17_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button11_Click(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }
