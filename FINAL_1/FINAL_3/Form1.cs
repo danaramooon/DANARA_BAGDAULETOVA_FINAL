@@ -29,21 +29,47 @@ namespace FINAL_3
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int[] a = {int.Parse(label1.Text), int.Parse(label3.Text), int.Parse(label4.Text), int.Parse(label5.Text), int.Parse(label6.Text) };
             for(int i = 1; i <=12; i++)
             {
-                for (int j = 0; j < 12; j++)
-                {
+                
                     if (int.Parse(label2.Text) == i)
-                    
-                            label2.ForeColor = Color.Red;
-                        if (int.Parse(label3.Text) == i)
-                            label3.ForeColor = Color.Red;
+                    {
+                        label2.ForeColor = Color.Red;
+                        label3.ForeColor = Color.Black;
+                        label4.ForeColor = Color.Black;
+                        label5.ForeColor = Color.Black;
+                        label6.ForeColor = Color.Black;
+                        label7.ForeColor = Color.Black;
+                        label8.ForeColor = Color.Black;
+                        label9.ForeColor = Color.Black;
+                        label10.ForeColor = Color.Black;
+                        label11.ForeColor = Color.Black;
+                        label1.ForeColor = Color.Black;
+                        label3.ForeColor = Color.Black;
+                    }
+                  if (i == int.Parse(label3.Text))
+                 {
+                    label2.ForeColor = Color.Black;
+                    label3.ForeColor = Color.Red;
+                  
+                }
+               if (i ==int.Parse(label4.Text) )
+                {
+                    label2.ForeColor = Color.Black;
+                    label3.ForeColor = Color.Black;
+                    label4.ForeColor = Color.Red;
                     
                 }
-
+                if (int.Parse(label5.Text) == i)
+                {
+                    label2.ForeColor = Color.Black;
+                    label3.ForeColor = Color.Black;
+                    label4.ForeColor = Color.Black;
+                    label5.ForeColor = Color.Red;
+                    
+                }
             }
-            
+               
         }
     }
 }
