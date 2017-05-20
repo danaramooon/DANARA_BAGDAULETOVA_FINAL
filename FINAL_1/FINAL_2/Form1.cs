@@ -13,6 +13,8 @@ namespace FINAL_2
     public partial class Form1 : Form
     {
         Button[,] button = new Button[3, 3];
+        string memorize = "";
+        int memnum = 0;
         public int x = 1, y = 1;
         public Form1()
         {
@@ -26,7 +28,7 @@ namespace FINAL_2
             for (int i = 2; i < x; i++)
             {
                 if (x % i == 0)
-                    return true;
+                    return false;
             }
             return true;
         }
@@ -37,12 +39,21 @@ namespace FINAL_2
             btn.Text = " ";
             btn.Text = x.ToString();
             x++;
+            memnum = x;
+            memorize = btn.Text;
+            if (x != memnum)
+                x = int.Parse(btn.Text);
             
-            
+
+
             if (is_prime(int.Parse(btn.Text)))
             {
                 textBox1.Text = y.ToString();
+                y++;
+
             }
+            
+
 
         }
 
