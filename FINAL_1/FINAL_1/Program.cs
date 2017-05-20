@@ -28,15 +28,16 @@ namespace FINAL_1
                 {
                     if (arr[i] == Math.Pow(2, j))
                     {
-                        foreach (FileInfo f in fl)
-                        {
-
-                            Console.WriteLine(f.Name + " " +  arr[i]);
-                        }
+                        
+                            Console.WriteLine(fl[c].Name + " ");
+                        Console.WriteLine(arr[i]);
+                        c++;
+                        
                     }
                 }
                 
             }
+            
             Console.ReadKey();
             
             //StreamReader sr = new StreamReader(@"C:\Users\Данара\Desktop\DANARA_BAGDAULETOVA_FINAL\Task1\file1.txt");
