@@ -41,9 +41,11 @@ namespace FINAL_2
             x++;
             memnum = x;
             memorize = btn.Text;
-            if (x != memnum)
-                x = int.Parse(btn.Text);
-            
+            if ( btn.Text != memorize)
+            {
+                memorize = btn.Text;
+                x = int.Parse(memorize);
+            }
 
 
             if (is_prime(int.Parse(btn.Text)))

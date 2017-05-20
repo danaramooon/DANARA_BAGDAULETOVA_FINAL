@@ -9,6 +9,7 @@ namespace FINAL_1
 {
     class Program
     {
+
         static void Main(string[] args)
         {
             int c = 0;
@@ -19,12 +20,10 @@ namespace FINAL_1
             int[] arr = new int[f1.Length];
             for (int i = 0; i < f1.Length; i++)
             {
-                
-                
                 arr[i] = int.Parse(f1[i]);
                 Array.Sort(arr);
                 int x = Math.Max(arr[0], arr[fl.Length - 1]);
-                for (int j = 0; j <= x; j++)
+                for (int j = 0; j < 100; j++)
                 {
                     if (arr[i] == Math.Pow(2, j))
                     {
