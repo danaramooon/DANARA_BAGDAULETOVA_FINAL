@@ -14,7 +14,8 @@ namespace FINAL_4
     public partial class Form1 : Form
     {
         int x = 50, y = 50;
-        int r = 100;
+        int r = 50;
+        Random t;
         Graphics g;
         SolidBrush br ;
         public Form1()
@@ -22,6 +23,7 @@ namespace FINAL_4
             InitializeComponent();
             br = new SolidBrush(Color.Aqua);
             g = pictureBox1.CreateGraphics();
+            t = new Random();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -33,16 +35,18 @@ namespace FINAL_4
         {
             g.FillEllipse(br,x, y, r, r);
             timer1.Enabled = true;
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
+            x = t.Next(1, pictureBox1.Width);
             y += 100;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void timer1_Tick_1(object sender, EventArgs e)
+        {
+            y += 1000;
         }
 
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
