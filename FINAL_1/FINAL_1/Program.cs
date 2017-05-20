@@ -11,14 +11,16 @@ namespace FINAL_1
     {
         static void Main(string[] args)
         {
+            int c = 0;
             DirectoryInfo dir = new DirectoryInfo(@"C:\Users\Данара\Desktop\DANARA_BAGDAULETOVA_FINAL\FINAL_1\FINAL_1\bin\Debug\Task1");
             FileInfo[] fl = dir.GetFiles();
             
-            StreamReader sr = new StreamReader(@" C: \Users\Данара\Desktop\DANARA_BAGDAULETOVA_FINAL\FINAL_1\FINAL_1\bin\Debug\Task1\file1.txt");
-            string[] f1 = sr.ReadToEnd().Split();
+           
            int[] arr = new int[f1.Length];
             for (int i = 0; i < f1.Length; i++)
-            {  
+            {
+                StreamReader sr = new StreamReader(fl[i].FullName);
+                 string[] f1 = sr.ReadToEnd().Split();
                 arr[i] = int.Parse(f1[i]);
                 Array.Sort(arr);
                 int x = Math.Max(arr[0], arr[fl.Length - 1]);

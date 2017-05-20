@@ -40,7 +40,9 @@ namespace FINAL_4
 
         private void timer1_Tick_1(object sender, EventArgs e)
         {
-            y += 1000;
+            timer1.Interval = y + 1000;
+            br = new SolidBrush(Color.Red);
+            y += 100;
         }
     }
 }
