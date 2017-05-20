@@ -35,23 +35,12 @@ namespace FINAL_4
         {
             g.FillEllipse(br,x, y, r, r);
             timer1.Enabled = true;
-            x = t.Next(1, pictureBox1.Width);
-            y += 100;
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
+            x = t.Next(10, pictureBox1.Width);
         }
 
         private void timer1_Tick_1(object sender, EventArgs e)
         {
             y += 1000;
-        }
-
-        private void pictureBox1_Paint(object sender, PaintEventArgs e)
-        {
-            
         }
     }
 }
